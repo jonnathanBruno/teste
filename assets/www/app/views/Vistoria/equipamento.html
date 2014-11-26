@@ -1,0 +1,11 @@
+<section id="equipamento" class="pagina">
+	<ul>
+		<li class="link estadoVistoria" ng-repeat="itemChecagem in itensChecagem | orderBy:'nome'" 
+			ng-class="estadoVistoria[itemChecagem.estado]"
+			ng-tap="paginaItemChecagem(itemChecagem.id)">
+			<p>{{itemChecagem.nome}}</p>
+
+			<span class="seta setaLinha"></span>
+		</li>
+	</ul>
+</section>

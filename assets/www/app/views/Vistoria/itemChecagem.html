@@ -1,0 +1,50 @@
+<section id="itemChecagem" class="pagina">
+	<ul>
+		<li class="itemConforme" ng-class="{conforme: itemChecagem.resultado1 == 'OK'}" ng-tap="salvarResultado('OK')">
+			<p>Conforme</p>
+			<input type="radio" class="radioCheckbox radio" ng-model="itemChecagem.resultado1" name="resultado" id="conforme" value="OK">
+		</li>
+		
+		<li class="itemNaoConforme" ng-class="{naoConforme: itemChecagem.resultado1 == 'NAO_CONFORME'}"  ng-tap="salvarResultado('NAO_CONFORME')">
+			<p>Não Conforme</p>
+			<input type="radio" class="radioCheckbox radio" ng-model="itemChecagem.resultado1" name="resultado" id="naoConforme" value="NAO_CONFORME">
+		</li>
+		
+		
+		<li class="titulo subSecao" ng-show="naoConformidades">
+			<h4>Não Conformidades</h4>
+		</li>
+		
+		<li class="linhaCheckbox" ng-repeat="naoConformidade in naoConformidades | orderBy:'nome'"
+			ng-class="{linhaCheckboxSelecionado: selecionada = naoConformidade.numeroNaoConformidade != undefined}" ng-tap="selecionarNaoConformidade(naoConformidade.id)">
+
+			<p>{{naoConformidade.nome}}</p>
+			<input type="checkbox" class="radioCheckbox checkbox" ng-model="selecionada" value="true" name="naoConformidade" id="{{naoConformidade.id}}">
+		</li>
+
+		<li class="titulo subSecao">
+			<h4>Observações</h4>
+		</li>
+		
+		<li class="linhaTextarea">
+			<textarea name="observacao" class="inputText observacao" ng-model="itemChecagem.observacao" ng-textarea
+					ng-blur="salvarObservacao()" desfocar="desfocarTextarea" placeholder="OBSERVACAO"></textarea>
+		</li>
+
+		<div ng-show="itemChecagem.resultado1 == 'NAO_CONFORME'">
+			<li class="titulo subSecao">
+				<h4>Parecer</h4>
+			</li>
+			
+			<li class="linhaTextarea">
+				<textarea name="parecer" class="inputText parecer" ng-model="parecer" ng-textarea
+						ng-blur="salvarParecer()" desfocar="desfocarTextarea" placeholder="Parecer"></textarea>
+			</li>
+		</div>
+	</ul>
+
+	<div class="fixo baixoFixo">
+		<input type="button" class="botao botaoOk" name="ok" id="ok" value="OK" ng-tap="voltar()">
+		<input type="button" class="botao botaoCancelar" name="cancelar" id="cancelar" value="Cancelar" ng-tap="cancelar()">
+	</div> 
+</section>

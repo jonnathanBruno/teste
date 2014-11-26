@@ -1,0 +1,19 @@
+<section id="inicio" class="pagina">
+	
+	<div class="linhaBotao">
+		<input type="button" class="botao botaoOk" id="iniciar" name="iniciar"
+		       value="Iniciar Vistoria" ng-disabled="vistoriador == undefined" ng-tap="paginaVistorias(vistoriador.id)"/>
+
+		<input type="button" class="botao botaoInfo" id="selecionarVistoriador" name="selecionarVistoriador"
+		       value="Selecionar Vistoriador" ng-tap="paginaVistoriadores()"/>
+
+		<input type="button" class="botao" id="configuracoes" name="configuracoes"
+		       value="Configurações" ng-tap="paginaConfiguracoes()"/>
+	</div>
+
+	<div class="fixo baixoFixo" ng-show="vistoriador != undefined">
+		<h2>{{vistoriador.nome}}</h2>
+
+		<em>{{vistoriador.matricula}}</em>
+	</div>
+</section>

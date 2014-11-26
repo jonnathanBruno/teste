@@ -1,0 +1,19 @@
+ <section id="imovel" class="pagina">
+
+	<!-- <div class="dadosImovel link">
+		<h3  class="nomeImovel">{{imovel.nome.toLowerCase()}}</h3>
+		<p class="enderecoImovel">
+			{{imovel.logradourotipo}} {{imovel.logradouro}}, nº {{imovel.numero}}
+			<b>{{imovel.bairro}} - {{imovel.cidade}}</b> <br />
+			{{imovel.area}}m²
+		</p>
+	</div> -->
+
+	<div class="ngEstadoConexao" ng-offline="dispositivoOnLine = false" ng-online="dispositivoOnLine = true; mapaIniciado = true" ng-switch
+		 on="dispositivoOnLine || mapaIniciado">
+		<div class="mapa" id="mapa" marca="{{marca}}" ng-switch-when="true"></div>
+	
+		<em class="estadoConexaoOffLine estadoConexao" ng-switch-default>{{dispositivoOnline | filtroMensagens:'conexao'}}</em>
+	</div>
+	
+</section>

@@ -1,0 +1,20 @@
+<section id="vistoriadores" class="pagina">
+	
+	<div class="busca">
+		<input type="text" ng-model="busca" name="busca" placeholder="Busca por Nome ou Matrícula" ng-init="busca = ''">
+	</div>
+
+	<ul>
+		<li class="clicavel link" ng-repeat="vistoriador in vistoriadores | orderBy:'nome' | filter:busca"
+			ng-tap="iniciarVistoria(vistoriador)">
+			
+			<h4 class="nomeImovel">{{vistoriador.nome}}</h4>
+			<br />
+			<em class="data">
+				{{{true: vistoriador.matricula, false: 'Sem Matrícula'}[vistoriador.matricula != 'undefined']}}
+			</em>
+
+			<span class="seta setaLinha"></span>
+		</li>
+	</ul>
+</section>

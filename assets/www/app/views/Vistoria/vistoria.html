@@ -1,0 +1,25 @@
+ <section id="vistoria" class="pagina">
+<!--	<div class="busca">-->
+<!--		<input type="text" ng-model="busca" name="busca" placeholder="Busca por Equipamento" ng-init="busca = ''">-->
+<!--	</div>  | filter: { equipamento.nome: busca} -->
+
+	<ul>
+		<li class="dadosImovel link" ng-tap="paginaImovel()">
+			<h3  class="nomeImovel">{{imovel.nome.toLowerCase()}}</h3>
+			<p class="enderecoImovel">
+				{{imovel.logradourotipo}} {{imovel.logradouro}}, nº {{imovel.numero}}
+				<b>{{imovel.bairro}} - {{imovel.cidade}}</b> <br />
+				{{imovel.area}}m²
+			</p>
+		</li>
+
+		<li class="link estadoVistoria" ng-repeat="equipamento in equipamentos | orderBy:'nome'" 
+			ng-class="estadoVistoria[equipamento.estado]"
+			ng-tap="paginaEquipamento(equipamento.id, equipamento.nome)">
+			<p>{{equipamento.nome}}</p> 
+			
+			<span class="seta setaLinha"></span>
+		</li>
+	</ul>	
+	
+</section>

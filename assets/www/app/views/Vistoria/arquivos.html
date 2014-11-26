@@ -1,0 +1,12 @@
+<section id="arquivos" class="pagina">
+	<ul>
+		<li class="clicavel link" ng-repeat="arquivo in arquivos | orderBy:'nome'" ng-tap="abrirArquivo(arquivo.nome)">
+			<p>
+				{{arquivo.nome}} <br />
+				<em><small>{{arquivo.tamanho | tamanhoArquivo}}</small></em>
+			</p>
+
+			<span class="seta setaLinha"></span>
+		</li>
+	</ul>
+</section>

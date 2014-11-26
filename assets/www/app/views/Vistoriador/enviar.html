@@ -1,0 +1,36 @@
+<section id="enviar" class="pagina">	
+	<ul>
+
+		<div class="linhaBotao">
+			<input type="button" class="botao botaoOk" id="enviar" name="enviar"
+				   value="Enviar" ng-disabled="!validarEnviar()" ng-tap="enviar()"/>
+
+			<em class="ngEstadoConexao estadoConexao" ng-class="{'estadoConexaoOffLine' : !dispositivoOnLine}"
+				ng-offline="estadoConexao(false)" ng-online="estadoConexao(true)" ng-Show="!dispositivoOnLine">
+				{{dispositivoOnline | filtroMensagens:'conexao'}}
+			</em>
+		</div>
+		
+		<li class="linhaCheckbox linhaCheckboxTodos" ng-show="vistorias.length > 1"
+			ng-tap="selecionarTodos()" ng-class="{linhaCheckboxSelecionado: selecionado = todos}">
+			<p>TODOS ({{vistorias.length}})</p>
+
+			<input type="checkbox" class="radioCheckbox checkbox" name="todasVistorias" id="todos" ng-model="selecionado" value="true">
+		</li>
+
+		<li ng-repeat="vistoria in vistorias | orderBy:'data':true" 
+			ng-class="{linhaCheckboxSelecionado: selecionada = vistoriasSelecionadas.indexOf(vistoria) > -1}"
+			ng-tap="selecionar($index)">
+			
+			<p class="nomeImovel">{{vistoria.imovelNome.toLowerCase()}}</p>
+
+			<input type="checkbox" class="radioCheckbox checkbox" name="vistorias" id="{{$index}}" ng-model="selecionada" value="true">
+		</li>
+
+	</ul>
+</section>
+
+<dialogo>
+	<dialogo-transferencia abrir="abrirDialogo" lista="vistoriasSelecionadas" enviado="enviado" no-fim="voltar()" msgs="msgs">
+	</dialogo-transferencia>
+</dialogo>

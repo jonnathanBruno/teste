@@ -1,0 +1,1099 @@
+html{
+	background-color: white;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+	article{
+		margin-top: 33px;
+
+		color: #777;
+		-webkit-overflow-scrolling: touch;
+	}
+
+		section{
+			/*height: 92%;*/
+			/*padding-bottom: 0.5%;*/
+
+			/*overflow-x: hidden;
+			overflow-y: auto;*/
+
+			-webkit-overflow-scrolling: touch;
+		}
+
+/*
+	Tags padrão
+*/
+
+	*{
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  		-webkit-tap-highlight-color: transparent;
+	}
+
+	h1{
+		width: 59%;
+		margin: 0 20%;
+		
+		font-size: 140%;
+		letter-spacing: 0.1em;
+		font-family: Georgia, Palatino, serif;
+
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	ul{
+		padding-bottom: 1% !important;
+	}
+
+	h3{
+		font-size: 120%;
+	}
+
+	h4{
+		width: 87%;
+		font-size: 110%;
+
+		font-weight: normal;
+	}
+
+	p{
+		padding: 2.5%;
+	}
+
+	em{
+		font-size: 90%;
+	}
+
+	p,
+	em{
+		width: 80%;
+		font-size: 100%;	
+	}
+
+	ul{
+		padding: 0;
+		list-style: none;
+	}
+
+	li{
+		position: relative;
+
+		width: 98%;
+		padding: 2% 1%;
+		
+		background-color: #F5F5F5;
+		
+		border-top: 2px solid white;
+		border-bottom: solid 1px #999;
+		box-shadow: 0 1px 5px 1px #D0D1D1;
+	}
+
+	li:first-of-type{
+		border-top: solid 1px #999;
+	}
+
+	label{
+		margin-top: 3%;
+	}
+
+	textarea{
+		width: 93%;
+		height: 7em;
+
+		margin: 1%;
+
+		/*-webkit-border-radius: 3px;*/	
+
+		-webkit-user-modify: read-write;
+		-webkit-user-select: auto;
+	}
+
+	input[type=text],
+	input[type=password],
+	input[type=url],
+	textarea{
+		padding: 2%;
+		margin: 0.5% 0 1%;
+
+		line-height: 18px;
+
+		border: 1px solid #CCC;
+		color: #555555;
+		outline: none;
+		resize: none;
+		
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		
+		-webkit-tap-highlight-color: #99c2ff;
+		-webkit-transition: box-shadow 0.3s, border-color 0.3s;
+	}
+
+	input[type=number]::-webkit-inner-spin-button,
+	input[type=number]::-webkit-outer-spin-button{
+	    -webkit-appearance: none;
+	    margin: 0;
+	}
+
+	input[type=text],
+	input[type=password],
+	input[type=url]{
+		padding: 3%;
+		width: 93%;
+	}
+
+	input[type=text]:focus,
+	input[type=password]:focus,
+	input[type=url]:focus{
+		border-color: white;
+		box-shadow: 0 0 12px 1px #99c2ff; /* #D0D1D1 #d14836 #99c2ff #668BE6;*/
+	}
+
+	::-webkit-scrollbar {
+		width: 5px;
+	}
+
+	::-webkit-scrollbar-track {
+	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	    -webkit-border-radius: 10px;
+	    border-radius: 10px;
+	}
+	 
+	::-webkit-scrollbar-thumb {
+		z-index: 1;
+	    background: #999; 
+	    border-radius: 10px;
+	    -webkit-border-radius: 10px;
+	    -webkit-box-shadow: inset 0 0 6px #333; 
+	}
+	::-webkit-scrollbar-track-piece{
+		background-color: #F1F0F0;
+		-webkit-box-shadow: inset 0 0 6px #AAA; 
+	}
+		
+/*
+	Fim Tags padrão
+*/
+
+/*
+	Views
+*/
+	.articleLogin{
+		margin-top: 0;
+	}
+
+	#inicio .baixoFixo > *{
+		width: 100%;
+		text-align: center;
+	}
+
+	#inicio input{
+		font-size: 120%;
+	}
+
+	#configuracoes form > div{
+		padding: 1% 2%;
+	}
+
+	#vistorias ul{
+		padding-bottom: 0.5% !important;
+	}
+	
+	#vistorias .seta{
+		top: 22%;
+	}
+
+	.botaoArquivo{
+		width: 18.5% !important;
+	}
+
+	.dadosImovel{
+		float: left;
+		width: 96%;
+
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+	
+	.dadosImovel:active h3{
+		color: white;
+	}
+
+		.dadosImovel h3{
+			width: 100%;
+		}
+
+	#itemChecagem,
+	#inicio{
+		position: relative;
+
+		padding-bottom: 41px;
+	}
+
+		#itemChecagem > :first-child,
+		#inicio > :first-child{
+			margin-bottom: 3%;
+		}
+
+	#itemChecagem li{
+		width: 99%;
+	}
+
+	#enviar li h4,
+	#enviar li em{
+		padding-left: 1.5%;
+	}
+
+	#enviar .radioCheckbox{
+		margin-left: 0;
+	}
+
+/*
+	Fim Views
+*/
+
+/*
+	Classes
+*/
+
+	.busca{
+		width: 98%;
+		padding: 1%;
+		
+		background-color: #D2D2D2;
+	}
+
+	.nomeImovel{
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.enderecoImovel{
+		width: 100%;
+		padding: 0 !important;
+			
+		font-size: 95%;
+		font-style: italic;
+	}
+
+	.data{
+		width: 60%;
+		margin-bottom: 1%;
+		
+		font-size: 90%;
+		font-weight: bold;
+	}
+
+	.informacao{
+		float: right;
+		width: 35%;
+	}
+
+	.seta{
+		position: absolute;
+
+		width: 21px;
+		height: 31px;
+
+		background-image: url('../img/seta.png');
+		-webkit-background-size: 58px 31px;
+		background-size: 58px 31px;
+	}
+
+		.setaLinha{
+			top: 12%;
+			right: 1%;
+
+			width: 29px;
+		}
+
+		.setaNavDireita{
+			right: -17%;
+		}
+
+		.setaNavDireita,
+		.setaNavEsquerda{
+			top: -6.5%;
+
+			width: 14px;
+		}
+
+		.setaNavEsquerda{
+			left: -20%;
+			background-image: url('../img/seta2.png');
+		}
+
+		.setaNavDireita{
+			background-position: top right;
+		}
+
+	.barraNav{
+		position: fixed;
+
+		z-index: 999;
+	}
+
+		.botaoNav{
+			position: absolute;
+			height: 25px;
+			top: 10%;
+			
+			width: 18.5%;
+			padding: 0.6% 1%;
+			border-radius: 10px;
+			
+			font-size: 85%;
+			line-height: 2em;
+			/*background-color: #888;*/
+		}
+
+		.disabled{
+			opacity: .3;
+		}
+
+			.botaoNav em{
+				font-size: 85%;
+			}
+
+		.botaoNavEsquerda{
+			left: 1%;
+
+			width: 16%;
+		}
+
+			.botaoNavEsquerda em{
+				float: right;
+			}
+
+		.botaoNavDireita{
+			right: 1%;
+		}
+
+	.cliqueLinha{
+		border-top-color: transparent;
+		border-left-color: transparent !important;
+	}
+
+		.cliqueLinha *{
+			color: white !important;
+		}
+
+	.titulo{
+		color: whiteSmoke;
+		background-color: #555;
+	}
+
+	.subSecao{
+		border-top: none;
+	}
+
+	.subSecao h4{
+		width: 100%;
+	}
+
+	.estadoVistoria{
+		width: 96%;
+		padding-left: 2%;
+		padding-right: 0%;
+		
+		border-left: solid 6px transparent;
+	}
+
+		.naoConcluido{
+			border-left-color: #F16529;
+		}
+
+		.concluidoConforme{
+			border-left-color: #46974E; 
+		}
+
+		.concluidoNaoConforme{
+			border-left-color: #DA0000; 
+		}
+
+	.radioCheckbox{
+		position: relative;
+		float: right;
+		width: 23px;
+		height: 23px;
+		
+		margin-top: 1.5%;
+		
+		border: 1px solid #CCC;
+		vertical-align: baseline;
+		background: transparent;
+		
+		-webkit-appearance: none;
+		appearance: none;
+		
+		
+		-webkit-box-sizing: border-box;
+
+		color: white;
+	}
+
+	.radioCheckbox:before{
+		position: absolute;
+	}
+
+		.radio{
+			border-radius: 16px;
+		}
+
+			.radio:before{
+				top: 1px;
+				/*left: 3px;*/
+				/*top: 0;
+				left: 2px;*/
+				
+				font-size: 150%;
+			}
+
+				.radio:checked:before{
+					content: '\2716';
+				}
+
+		.checkbox{
+			border-radius: 1px;
+		}
+
+			.checkbox:before{
+				top: -3px;
+				left: -4px;
+				/*left: 1px;*/
+				
+				font-size: 180%;
+			}
+
+				.checkbox:checked:before{
+					content: '\2714';
+				}
+
+	.inputText:focus{
+		box-shadow: 0 0 12px 1px #99c2ff; /* #D0D1D1 #d14836 #99c2ff #668BE6;*/
+		border-color: white !important;
+	}
+
+	.linhaBotao{
+		float: left;
+		width: 100%;
+		
+		padding: 2% 0;
+		text-align: center;
+	}
+
+		.linhaBotao > input{
+			width: 85%;
+		}
+
+		.botao{
+			padding: 8% 0;
+			border: 0;
+
+			opacity: .6;
+			background-color: #999;	
+
+			font-size: 100%;
+			color: whiteSmoke;
+			white-space: pre-line;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+		}
+
+			.botao:enabled{
+				opacity: 1;
+			}
+
+				.botao:enabled:active{
+					opacity: .8;
+				}
+
+		.botaoOk{
+			background-color: #6FAF2D;
+		}
+
+		.botaoInfo{
+			background-color: #4176E5;
+		}
+
+		.botaoCancelar{
+			background-color: #D14836;
+		}
+
+		.ngTextarea + input{
+			position: absolute;
+			right: 0;
+
+			padding: 3% 5%;
+
+			visibility: hidden;
+		}
+
+		.ngTextarea + .botaoTextarea{
+			position: absolute;
+			bottom: 1%;
+		}
+
+			.ngTextarea:focus + input{
+				visibility: visible;
+			}
+
+	.linhaTextarea{
+		position: relative;
+		background-color: transparent;
+	}
+
+	.baixoFixo{
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+
+		padding: 1% 0;
+
+		z-index: 999;
+		opacity: .95;
+		background-color: whiteSmoke;
+		box-shadow: 0 1px 7px 1px #777;
+	}
+
+		.baixoFixo > *{
+			float: left;
+			width: 48%;
+
+			margin: 0 1%;
+		}
+
+		.baixoFixo input{
+			padding: 5%;
+		}
+
+		/*.baixoFixo .botaoOk{
+			float: left;
+		}
+
+		.baixoFixo .botaoCancelar{
+			float: right;
+		}*/
+
+	.invisivel{
+		visibility: hidden;
+	}
+
+	.carregando{
+		-webkit-animation: carregando 1s linear infinite;
+	}
+
+	@-webkit-keyframes carregando{
+		0% 		{ -webkit-transform: rotate(0deg);}
+		50%  	{ -webkit-transform: rotate(180deg);}
+		100%   	{ -webkit-transform: rotate(360deg);}
+	}
+
+/*
+	Fim Classes
+*/
+
+/* 
+	Componentes
+*/
+
+	dialogo{
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		height: 100%;
+		width: 100%;
+
+		z-index: 999;
+		display: none;
+		/*overflow-y: auto;
+		-webkit-overflow-scrolling: touch;*/
+	}
+
+		.background{
+			height: 100%;
+			width: 100%;
+
+			opacity: .9;
+		}
+
+		.janela{
+			position: absolute;
+			left: 5%;
+			top: 5%;
+			
+			width: 90%;
+			height: auto;
+
+			z-index: 9999;
+			border: solid 1px #CCC;
+		}
+
+			.conteudo{
+				float: left;
+				height: 100%;
+				width: 96%;
+				
+				padding: 2%;
+				/*-webkit-overflow-scrolling: touch;*/
+			}
+
+				.conteudo h3{
+					width: 100%;
+					margin: 2% 0;
+					
+					color: #222;
+					font-style: italic;
+					text-transform: capitalize;
+				}
+
+				.conteudo .carregando{
+					position: absolute;
+					right: 3.5%;
+					top: 12%;
+
+					width: 26px;
+				}
+
+				.vistoriasEnviadas{
+					color: #6FAF2D !important;
+				}
+
+				.vistoriasNaoEnviadas{
+					color: #EA0000 !important;
+				}
+
+				.conteudo li{
+					box-shadow: none;
+				}
+
+				.vistoriaEnviada{
+					position: absolute;
+					right: 5%;
+					top: 30%;
+				}
+
+				.vistoriaEnviada:after{
+					content: '\2714';
+					font-size: 130%;
+					color: green;
+				}
+
+				.vistoriaNaoEnviada:after{
+					content: '\2715';
+					font-size: 130%;
+					color: red;
+				}
+
+				.conteudo input{
+					width: 100%;
+
+					margin-top: 5%;
+					z-index: 9999;
+				}
+
+		.background,
+		.janela,
+		.conteudo li{
+			background-color: white;
+		}
+
+		.exclusividade{
+			overflow: hidden !important;
+		}
+
+	#mapa{
+		float: left;
+		width: 100%;
+		height: 100%;
+
+		/*border: solid 1px #999;*/
+		box-shadow: 0 0 8px 1px #666;
+	}
+
+		#mapa img{
+			max-width: none;
+		}
+
+		#detalhesMarca h4{
+			color: #555;
+			font-size: 100%;
+			font-weight: bold;
+		}
+
+		#detalhesMarca{
+			border-bottom: solid 2px #DDD;
+			padding-bottom: 1%;
+		}
+
+		#localizacaoMarca p{
+			font-size: 90%;
+		}
+
+		#janelaInformacao,
+		#detalhesMarca,
+		#localizacaoMarca{
+			width: 100% !important;
+			float: left;
+		}
+
+		/*.gmnoprint{
+			display: none;
+		}*/
+
+/*
+	Fim Componentes
+*/
+
+/*
+	Agrupamentos
+*/
+
+	body,
+	h2, h3, h4,
+	ul,
+	p{
+		margin: 0;
+	}
+
+	article,
+	section,
+	ul, li,
+	p, em,
+	h2, h3, h4{
+		float: left;
+	}
+
+	html,
+	header,
+	article,
+	section,
+	ul,
+	.estadoConexao{
+		width: 100%;
+	}
+
+	h1,
+	p{
+		line-height: 1.5em;
+	}
+
+	html,
+	body{
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	header,
+	.botaoNav{
+		overflow: hidden;
+	}
+
+	header,
+	.titulo,
+	.estadoConexao{
+		text-align: center;
+	}
+
+	h3,
+	.estadoConexaoOffLine{
+		color: #DA0000;
+	}
+
+	.estadoConexaoOnLine{
+		color: #6FAF2D;
+	}
+
+	html,
+	.dadosImovel{
+		background-color: white;
+	}
+
+	.nomeImovel,
+	.enderecoImovel{
+		text-transform: capitalize;
+	}
+
+	.link:active .seta,
+	.cliqueLinha .seta{
+		background-position: top right;
+		/*right: 1%;*/
+	}
+
+	.link:active,
+	.cliqueLinha,
+	.cliqueBarraNav,
+	.botaoNav:active,
+	.naoConforme{
+		background-color: #DA0000;
+	}
+
+	.conforme,
+	.itemConforme:active{
+		background-color: #46974E;
+	}
+
+	.link:active,
+	.botaoNav:active,
+	.naoConforme,
+	.conforme,
+	.itemConforme:active,
+	.linhaCheckboxSelecionado,
+	.linhaCheckbox:active{
+		color: white;
+		border-top-color: transparent;
+	}
+
+	.linhaCheckboxSelecionado,
+	.linhaCheckbox:active{
+		background-color: #4176E5;
+	}
+
+/*
+	Fim Agrupamentos
+*/
+
+/*
+	Media Queries
+*/
+
+	@media only screen and (min-width: 240px) {
+		b{
+			white-space: pre;
+			font-weight: normal;
+		}
+	}
+
+	@media only screen and (min-width: 320px) {
+		h1{
+			width: 73%;
+			margin: 0 16%;
+			
+			font-size: 170%;
+		}
+
+		article{
+			margin-top: 40px;
+		}
+
+		section{
+			height: 90.2%;
+		}
+
+		ul{
+			padding-bottom: 0.5% !important;
+		}
+
+		p{
+			font-size: 110%;
+			padding: 1.5%;
+		}
+
+		h3{
+			font-size: 120%;
+		}
+
+		input[type=text],
+		input[type=password],
+		input[type=url]{
+			width: 94%;
+			padding: 3%;
+		}
+
+		#vistoria b{
+			white-space: normal;
+		}
+
+		#vistoria b:before{
+			content: '- ';
+		}
+
+		.concluidoConforme,
+		.concluidoNaoConforme,
+		.naoConcluido{
+			padding-right: 0.6%;
+		}
+
+		.setaLinha{
+			top: 18%;
+		}
+
+		.botaoNav{
+			height: 25px;
+
+			padding: 1% 1.5%;
+		}
+
+			.botaoNav em{
+				font-size: 90%;
+			}
+
+		.botaoNavEsquerda{
+			left: 0;
+		}
+		
+		.botaoNavDireita{
+			right: 0;
+		}
+
+		.botaoNavEsquerda{
+			width: 14%;
+		}
+
+		.botaoNavDireita{
+			width: 15%;		
+		}
+
+			.botaoArquivos{
+				width: 18.5%;		
+			}
+
+			.setaNavEsquerda{
+				left: -10%;
+			}
+
+			.setaNavDireita{
+				right: -10%;
+			}
+
+			.setaNavDireita,
+			.setaNavEsquerda {
+				top: 3%;
+				width: 15px;
+			}
+
+		.radioCheckbox{
+			width: 25px;
+			height: 25px;
+		}
+
+		.radio:before{
+			font-size: 165%;
+		}
+
+		.checkbox:before{
+			font-size: 200%;
+		}
+
+		.radio:checked:before{
+			top: 1px;
+		}
+
+		.checkbox:checked:before{
+			top: -4px;
+			left: -4px;
+		}	
+	}
+
+	@media only screen and (min-width: 480px) {
+		h1{
+			width: 80%;
+			margin: 0 10%;
+			
+			font-size: 180%;
+		}
+
+		article{
+			margin-top: 43px;
+		}
+
+		h3{
+			font-size: 140%;
+		}
+		
+		h4,
+		li p{
+			font-size: 120%;
+		}
+
+		p{
+			padding: 1%;
+		}
+
+		/*li{
+			padding-top: 2.2%;
+			padding-bottom: 1.5%;
+		}*/
+
+		.botao{
+			padding: 6% 0;
+			font-size: 120%;
+		}
+
+		.botaoNav em{
+			font-size: 95%;
+		}
+
+		.botaoNavEsquerda{
+			width: 8.5%;
+		}
+
+		.botaoNavDireita{
+			right: 0.5%;
+			width: 9.5%;
+		}
+
+			.botaoArquivos{
+				width: 12.5%;
+			}
+
+		.botaoArquivo{
+			width: 12% !important;
+		}
+
+		.setaNavDireita,
+		.setaNavEsquerda{
+			top: 7% !important;
+		}
+		
+		.concluidoConforme,
+		.concluidoNaoConforme,
+		.naoConcluido{
+			padding-right: 1.5%;
+		}
+		
+		.radioCheckbox {
+			width: 30px;
+			height: 30px;
+		}
+
+		.radioCheckbox{
+			margin-top: 0.7%;
+		}
+
+		.radio:checked:before{
+			top: -3px;
+			left: -3px;
+
+			font-size: 190%;
+		}
+
+		.checkbox:checked:before{
+			top: -6px;
+
+			font-size: 210%;
+		}
+
+		.enderecoImovel{
+			font-size: 105%;
+		}
+
+		.seta{
+			top: 13%;
+		}
+
+		.informacao{
+			width: 10%;
+		}
+	}
+
+/*
+	Media Queries
+*/

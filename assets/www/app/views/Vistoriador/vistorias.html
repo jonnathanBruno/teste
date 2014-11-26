@@ -1,0 +1,24 @@
+<section id="vistorias" class="pagina">
+	
+	<!-- <div class="busca">
+		<input type="text" ng-model="busca" name="busca" placeholder="Busca por Nº Processo | Imóvel | Proprietário" ng-init="busca = ''">
+	</div> -->
+
+	<ul>	
+		<li class="link estadoVistoria" ng-repeat="vistoria in vistorias | orderBy:'data':true | filter:busca" 
+			ng-class="estadoVistoria[vistoria.estado]"
+			ng-tap="paginaVistoria(vistoria.id)">
+			
+			<em class="data">{{vistoria.numProtocolo}} - {{data(vistoria.data)}}</em>
+			<h4 class="nomeImovel">{{vistoria.imovelNome.toLowerCase()}}</h4>
+
+			<span class="seta setaLinha"></span>
+		</li>
+	<ul>
+		
+</section>
+
+<dialogo>
+	<dialogo-transferencia abrir="abrirDialogo" lista="lista" enviado="baixado" msgs="msgs">
+	</dialogo-transferencia>
+</dialogo>

@@ -1,0 +1,17 @@
+<section id="configuracoes" class="pagina">
+	<form name="form">
+
+		<div>
+			<label for="ENDERECO">Endereco do Servidor:</label>
+			<input type="text" name="endereco" id="endereco" ng-model="endereco" required>
+		</div>
+
+	</form>
+
+	<div class="fixo baixoFixo">
+		<input type="submit" class="botao botaoOk" name="ok" id="ok" value="OK" ng-tap="salvar()"
+				ng-disabled="form.$invalid || !temModificacao()">
+		<input type="button" class="botao botaoCancelar" name="cancelar" id="cancelar" value="Cancelar"
+				ng-tap="cancelar()" ng-disabled="!temModificacao()">
+	</div> 
+</section>

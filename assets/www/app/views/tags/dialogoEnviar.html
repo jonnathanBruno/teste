@@ -1,0 +1,25 @@
+<header>
+    <h3 ng-class="{'vistoriasEnviadas': enviando > 0, 'vistoriasNaoEnviadas': enviando < 0}">
+        <ng-pluralize count="enviando" offset=2
+           when="{
+                '0'     : '{{msgs.durante}}',
+                '-1'    : '{{msgs.erro}}',
+                'one'   : '{{msgs.sucesso}}',
+                'other' : '{{msgs.sucessos}}'
+            }">
+        </ng-pluralize>
+    </h3>
+</header>
+
+<ul>
+    <li ng-repeat="item in lista">
+        <em class="nomeImovel">{{item.imovelNome}}</em>
+        <img src="img/carregando.png" class="carregando" ng-show="estaEnviando(item.id)">
+
+        <b ng-class="{true: 'vistoriaEnviada', false: 'vistoriaNaoEnviada'}[jaEnviado(item.id)]"
+            ng-show="!estaEnviando(item.id)"></b>
+    </li>
+</ul>
+
+<input type="button" class="botao botaoOk" id="fecharDialogo" name="fechar" value="OK" ng-tap="fechar()"
+        ng-disabled="enviando == 0" />
